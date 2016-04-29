@@ -66,10 +66,8 @@ RUN curl -fSL "http://downloads3.ioncube.com/loader_downloads/ioncube_loaders_li
     && rm -rf ioncube_loaders_lin_x86-64.tar.gz /usr/src/ioncube
 
 # install composer
-ENV COMPOSER_SHA384 41e71d86b40f28e771d4bb662b997f79625196afcca95a5abf44391188c695c6c1456e16154c75a211d238cc3bc5cb47
 RUN set -x \
     && curl -fSL "https://getcomposer.org/installer" -o composer-setup.php \
-    && echo "$COMPOSER_SHA384 *composer-setup.php" | sha384sum -c - \
     && php composer-setup.php \
     && mv composer.phar /usr/local/bin/composer \
     && rm -f composer-setup.php \
