@@ -1,4 +1,4 @@
-FROM wenbin1989/php5-nginx
+FROM wenbin1989/php-nginx:5.6
 MAINTAINER Wenbin Wang <wenbin1989@gmail.com>
 
 # install persistent / runtime deps
